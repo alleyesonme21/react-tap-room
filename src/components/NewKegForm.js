@@ -20,7 +20,7 @@ function NewKegForm(props) {
       <input
       type='text'
       name='name'
-      placeholder=' Names'/>
+      placeholder=' Name'/>
       <input 
       type='text'
       name='brand'
@@ -34,7 +34,7 @@ function NewKegForm(props) {
       name='flavor'
       placeholder='flavor'
       />
-      <button type='submit'>Help</button>
+      <button type='submit'>Submit</button>
       </form>
     </React.Fragment>
   );
