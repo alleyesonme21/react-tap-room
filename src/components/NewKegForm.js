@@ -1,35 +1,20 @@
 import React from 'react';
 import { v4 } from 'uuid';
+import ReusableForm from './ReusableForm';
 import PropTypes from 'prop-types';
 
 function NewKegForm(props) {
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, flavor: event.target.flavor.value, id: v4()});
+    props.onNewKegCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, flavor: event.target.flavor.value, numberLeft: 124, id: v4()});
   }
 
   return (
     <React.Fragment>
-      <form onSubmit={handleNewKegFormSubmission}>
-      <input
-      type='text'
-      name='name'
-      placeholder=' Name'/>
-      <input 
-      type='text'
-      name='brand'
-      placeholder='brand' />
-      <input 
-      type='text'
-      name='price'
-      placeholder='price' />
-      <input
-      type='text'
-      name='flavor'
-      placeholder='flavor'
+      <ReusableForm
+        formSubmissionHandler={handleNewKegFormSubmission}
+        buttonText='Help'
       />
-      <button type='submit'>Submit</button>
-      </form>
     </React.Fragment>
   );
 }
