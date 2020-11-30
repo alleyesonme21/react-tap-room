@@ -73,11 +73,6 @@ this.setState({
 handleEditClick = () => {
   this.setState({editing: true})
 }
-
-// handleDecrement = () => {
-//   this.state.masterKegList
-// }
-
   render() {
     let currentlyVisibleState = null;
     let buttonText = null; // new  code 
@@ -86,7 +81,6 @@ handleEditClick = () => {
       currentlyVisibleState = <EditKegForm keg = {this.state.selectedKeg} onEditKeg = {this.handleEditingKegList} />
       buttonText = 'Return to ticket List';
     }
-
     else if (this.state.selectedKeg != null) {
       currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onClickingSell={this.handleSellUnit} onClickingDelete= {this.handleDeletedKeg} onClickingEdit={this.handleEditClick} /> 
       buttonText = "return to Keg List";
@@ -94,7 +88,8 @@ handleEditClick = () => {
     else if(this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />  // new code in this line
       buttonText = "Return to Keg List" //new code 
-      } else { 
+      } 
+      else { 
       currentlyVisibleState = <KegList kegList={this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg} />; // detail part
       buttonText = "Add Keg"; // new code
     }
@@ -112,6 +107,5 @@ handleEditClick = () => {
   }
   
 }
-
 
 export default KegControl;
