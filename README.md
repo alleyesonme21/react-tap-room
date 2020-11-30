@@ -1,7 +1,47 @@
-# Getting Started with Create React App
+# Tap Room
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created: 11/29/2020 By Johnny Duverseau 
 
+# Description
+
+This program is for a user of a bar to create, update, delete, or see details for kegs available at a brewery. The program allows the bar manager to track keg inventory. A user can create his or her own keg list and see prices of each keg. Finally, when the user sells a pint, the application will decrement by 1, and update the amount of kegs availabe for sale.
+
+## Setup/Installation Requirements;
+- Git clone 
+- Open terminal 
+- cd tap-room1
+- Open in vsCode
+- npm install
+- npm build 
+- npm start 
+
+## Technologies Used
+- Visual Studio Code
+- React
+- JSX
+- Javascript
+
+## Application Diagram
+
+<img src="./src/img/appDiagram.jpg" />
+
+
+## Support and contact details
+- Discord: duverseaujohnny21 #2298
+- Email: duverseaujohnny21@gmail.com
+
+## License
+Copyright (c) 2020 Johnny Duverseau
+
+This software is licensed under the MIT license.
+
+
+
+
+
+
+
+<!-- 
 ## Available Scripts
 
 In the project directory, you can run:
@@ -67,4 +107,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
