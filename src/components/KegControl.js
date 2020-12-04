@@ -55,6 +55,12 @@ class KegControl extends React.Component {
   }
 }
 
+handleAddingNewKegToList = (newKeg) => {
+  const newMasterKegList = this.state.masterKegList.concat(newKeg);
+  this.setState({masterKegList: newMasterKegList,
+    formVisibleOnPage: false });
+}
+
 handleDeletedKeg = (id) => {
   const newMasterKegList = this.state.masterKegList.filter(keg => keg.id !== id);
   this.setState({
@@ -102,12 +108,15 @@ handleEditClick = () => {
     </React.Fragment>
     );
   }
-  handleAddingNewKegToList = (newKeg) => {
-    const newMasterKegList = this.state.masterKegList.concat(newKeg);
-    this.setState({masterKegList: newMasterKegList,
-      formVisibleOnPage: false });
-  }
-  
 }
+const mapStateToProps = state => {
+  return {
+    masterKegList: state.masterKegList,
+    formVisibleOnPage: state.formVisibleOnPage,
+    selectedKeg: state.selectedKeg,
+    editing: state.editing
+  }
+}
+KegControl = connect(mapStateToProps)(KegControl);
 
 export default KegControl;
