@@ -14,7 +14,7 @@ describe('kegListReducer', () => {
     expect(kegListReducer({}, {type: null})).toEqual({})
   });
   test('Should successfully and new keg data to masterKegList', () => {
-    const { name, brand, price, flavor, id}
+    const { name, brand, price, flavor, id } = kegData;
     action = {
       type: 'ADD_KEG',
       name: name,
