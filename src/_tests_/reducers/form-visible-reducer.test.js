@@ -5,7 +5,7 @@ describe('formVisibleReducer', () => {
     expect(formVisibleReducer(false, {type: null})).toEqual(false)
   })
   test('Should TOGGLE visibility state to true', () => {
-    expect(formVisibleReducer(false, 'TOGGLE')).toEqual(true);
+    expect(formVisibleReducer(false, {type:'TOGGLE' })).toEqual(true);
 
   })
 })
