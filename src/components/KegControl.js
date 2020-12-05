@@ -4,7 +4,7 @@ import KegList from './KegList';
 import KegDetail from './KegDetail';
 import EditKegForm from './EditKegForm';
 import { connect } from 'react-redux';
-import PropTypes from 'props-types';
+import PropTypes from 'prop-types';
 
 class KegControl extends React.Component {
   constructor (props) {
@@ -109,6 +109,14 @@ handleEditClick = () => {
     );
   }
 }
+KegControl.propTypes = {
+masterKegList: PropTypes.object,
+formVisibleOnPage: PropTypes.bool,
+selectedKeg: PropTypes.bool,
+editing: PropTypes.bool
+
+}
+
 const mapStateToProps = state => {
   return {
     masterKegList: state.masterKegList,
