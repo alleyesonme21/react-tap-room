@@ -22,6 +22,8 @@ This program is for a user of a bar to create, update, delete, or see details fo
 - Javascript
 - Html
 - css
+- redux
+- react-redux
 
 ## Application Diagram
 
